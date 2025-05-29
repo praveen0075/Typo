@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490537457949",
+    "project_id": "mini-social-media-app-987e8",
+    "storage_bucket": "mini-social-media-app-987e8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490537457949:android:dfb7717be8752e4d5669f4",
+        "android_client_info": {
+          "package_name": "com.example.mini_social_media"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpc_F266tlSsFZgGHQk1y7HiVmScMr6kg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
