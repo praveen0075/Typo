@@ -7,9 +7,10 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void logOut(){
+    void logOut() {
       FirebaseAuth.instance.signOut();
     }
+
     return Drawer(
       child: Column(
         children: [
@@ -37,7 +38,7 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon( 
+            leading: Icon(
               Icons.group,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
@@ -46,18 +47,20 @@ class CustomDrawer extends StatelessWidget {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/users_page");
             },
-          ), 
+          ),
           ListTile(
-            leading: Icon( 
+            leading: Icon(
               Icons.logout,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
-            title: Text("L O G  O U T"), 
+            title: Text("L O G  O U T"),
             onTap: () {
               logOut();
-              Navigator.pop(context);
-
-            
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                "/login_page",
+                (route) => true,
+              );
             },
           ),
         ],

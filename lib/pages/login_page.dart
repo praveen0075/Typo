@@ -25,7 +25,6 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     try {
-      //  UserCredential userCredential =
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text,
         password: passWordController.text,
@@ -74,12 +73,6 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    "Forgot password?",
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                    ),
-                  ),
                 ],
               ),
               kh20,

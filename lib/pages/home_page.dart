@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                           color: Colors.black
                         ),
                       ),
-                      subtitle: Text(email),
+                      subtitle: Text(msg),
                     );
                   },
                 );

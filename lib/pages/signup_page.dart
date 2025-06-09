@@ -79,73 +79,75 @@ class _SignupPageState extends State<SignupPage> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(25),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.person,
-                size: 80,
-                color: Theme.of(context).colorScheme.inversePrimary,
-              ),
-              kh20,
-              Text("H E L L O   W O R L D", style: TextStyle(fontSize: 20)),
-              kh30,
-              CustomeTextfield(
-                hintText: "username",
-                obscure: false,
-                txtController: usernameController,
-              ),
-              kh10,
-              CustomeTextfield(
-                hintText: "Email",
-                obscure: false,
-                txtController: emailController,
-              ),
-              kh10,
-              CustomeTextfield(
-                hintText: "Password",
-                obscure: true,
-                txtController: passWordController,
-              ),
-              kh10,
-              CustomeTextfield(
-                hintText: "Confirm Password",
-                obscure: true,
-                txtController: confirmPasswordController,
-              ),
-              kh20,
-              CustomButton(
-                buttonText: "Register",
-                onTap: () {
-                  signUpTheUser();
-                },
-              ),
-              kh20,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account?",
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.inversePrimary,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.person,
+                  size: 80,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+                kh20,
+                Text("H E L L O   W O R L D", style: TextStyle(fontSize: 20)),
+                kh30,
+                CustomeTextfield(
+                  hintText: "username",
+                  obscure: false,
+                  txtController: usernameController,
+                ),
+                kh10,
+                CustomeTextfield(
+                  hintText: "Email",
+                  obscure: false,
+                  txtController: emailController,
+                ),
+                kh10,
+                CustomeTextfield(
+                  hintText: "Password",
+                  obscure: true,
+                  txtController: passWordController,
+                ),
+                kh10,
+                CustomeTextfield(
+                  hintText: "Confirm Password",
+                  obscure: true,
+                  txtController: confirmPasswordController,
+                ),
+                kh20,
+                CustomButton(
+                  buttonText: "Register",
+                  onTap: () {
+                    signUpTheUser();
+                  },
+                ),
+                kh20,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Already have an account?",
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                      ),
                     ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginPage()),
-                        (route) => false,
-                      );
-                    },
-                    child: Text(
-                      " Login Here",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPage()),
+                          (route) => false,
+                        );
+                      },
+                      child: Text(
+                        " Login Here",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
